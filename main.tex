@@ -57,7 +57,7 @@ Wyniki można przedstawić w postaci tabeli:
 \addplot table [/pgf/number format/read comma as period, header=false,x index=0,y index=3, mark=*, col sep=semicolon] {dane_lab.csv};
 \addlegendentry{Pomiary spadku}
 
-\addplot [line width=2mm, color=red] table [/pgf/number format/read comma as period, header=false,x index=0,y index=1, mark=none, col sep=semicolon] {dane_lab.csv};
+\addplot [line width=2mm, color=green] table [/pgf/number format/read comma as period, header=false,x index=0,y index=1, mark=none, col sep=semicolon] {dane_lab.csv};
 \addlegendentry{Spadek wedlug wzoru}
 
 \end{axis}
