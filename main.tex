@@ -1,19 +1,23 @@
+%Wojciech Suchecki ITE
+
 \documentclass{article}
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{longtable}
+\usepackage[13]{csvsimple}
+\usepackage{pgfplots}
 
 \title{Latech}
 \author{Wojciech Suchecki}
-\date{Grudzieñ 2022}
+\date{GrudzieÅ„ 2022}
 
 \begin{document}
 \maketitle
 
 \section{Wprowadzenie teoretyczne}
-Spadek swobodny – ruch odbywaj¹cy siê wy³¹cznie pod wp³ywem ciê¿aru (si³y grawitacji), bez oporów oœrodka. Okreœlone wzorem:
+Spadek swobodny â€“ ruch odbywajÄ…cy siÄ™ wyÅ‚Ä…cznie pod wpÅ‚ywem ciÄ™Å¼aru (siÅ‚y grawitacji), bez oporÃ³w oÅ›rodka. OkreÅ›lone wzorem:
 
 \begin{equation}
     v = g * t
@@ -28,125 +32,40 @@ Spadek swobodny – ruch odbywaj¹cy siê wy³¹cznie pod wp³ywem ciê¿aru (si³y grawit
 \end{center}
 \end{figure}
 
-Jak widaæ na rysunku pierwszym, (Rysunek \ref{Spadek}) spadek swobodny jest zjawiskiem ciekawym.
+Jak widaÄ‡ na rysunku pierwszym, (Rysunek \ref{Spadek}) spadek swobodny jest zjawiskiem ciekawym.
 
-\section{Wyniki pomiarów}
-Wyniki mo¿na przedstawiæ w postaci tabeli:
-\begin{center}
-\begin{longtable}{r|r|r|r}
-\caption{A sample long table.} \label{tab:long} \\
-
- \multicolumn{1}{r|}{\textbf{t[s]}} & \multicolumn{1}{r|}{\textbf{s[m]}} &  \multicolumn{1}{r|}{\textbf{delta s}} & \multicolumn{1}{|r}{\textbf{\^s}} \\ \hline
-\endfirsthead
-
-\endlastfoot
-0,10 & 0,05 & 2,36 & 2,41 \\
-        0,20 & 0,20 & 4,36 & 4,56 \\
-        0,30 & 0,44 & 21,91 & 22,35 \\
-        0,40 & 0,78 & -7,72 & -6,94 \\
-        0,50 & 1,23 & -8,73 & -7,50 \\
-        0,60 & 1,76 & -8,84 & -7,08 \\
-        0,70 & 2,40 & -4,33 & -1,93 \\
-        0,80 & 3,14 & 4,57 & 7,71 \\
-        0,90 & 3,97 & -13,03 & -9,06 \\
-        1,00 & 4,90 & 13,82 & 18,72 \\
-        1,10 & 5,93 & -1,53 & 4,40 \\
-        1,20 & 7,06 & -14,68 & -7,62 \\
-        1,30 & 8,28 & -3,12 & 5,16 \\
-        1,40 & 9,60 & 12,35 & 21,95 \\
-        1,50 & 11,03 & 2,35 & 13,37 \\
-        1,60 & 12,54 & 14,01 & 26,55 \\
-        1,70 & 14,16 & 8,98 & 23,14 \\
-        1,80 & 15,88 & 7,14 & 23,02 \\
-        1,90 & 17,69 & -7,85 & 9,84 \\
-        2,00 & 19,60 & 1,90 & 21,50 \\
-        2,10 & 21,61 & 1,10 & 22,71 \\
-        2,20 & 23,72 & -6,33 & 17,38 \\
-        2,30 & 25,92 & -7,78 & 18,15 \\
-        2,40 & 28,22 & 11,16 & 39,38 \\
-        2,50 & 30,63 & 3,62 & 34,25 \\
-        2,60 & 33,12 & 9,29 & 42,41 \\
-        2,70 & 35,72 & -7,35 & 28,37 \\
-        2,80 & 38,42 & -9,49 & 28,93 \\
-        2,90 & 41,21 & -8,97 & 32,24 \\
-        3,00 & 44,10 & 8,44 & 52,54 \\
-        3,10 & 47,09 & -8,01 & 39,08 \\
-        3,20 & 50,18 & -2,48 & 47,70 \\
-        3,30 & 53,36 & 13,88 & 67,24 \\
-        3,40 & 56,64 & -12,93 & 43,71 \\
-        3,50 & 60,03 & 2,54 & 62,57 \\
-        3,60 & 63,50 & 12,48 & 75,99 \\
-        3,70 & 67,08 & 6,58 & 73,67 \\
-        3,80 & 70,76 & 11,30 & 82,05 \\
-        3,90 & 74,53 & 10,89 & 85,42 \\
-        4,00 & 78,40 & 7,04 & 85,44 \\
-        4,10 & 82,37 & 5,97 & 88,34 \\
-        4,20 & 86,44 & 2,70 & 89,14 \\
-        4,30 & 90,60 & 7,30 & 97,90 \\
-        4,40 & 94,86 & -11,38 & 83,49 \\
-        4,50 & 99,23 & -14,09 & 85,14 \\
-        4,60 & 103,68 & -11,75 & 91,93 \\
-        4,70 & 108,24 & -7,63 & 100,61 \\
-        4,80 & 112,90 & 2,67 & 115,56 \\
-        4,90 & 117,65 & -18,01 & 99,64 \\
-        5,00 & 122,50 & 12,94 & 135,44 \\
-        5,10 & 127,45 & 8,27 & 135,71 \\
-        5,20 & 132,50 & -2,31 & 130,19 \\
-        5,30 & 137,64 & 18,65 & 156,29 \\
-        5,40 & 142,88 & 9,28 & 152,17 \\
-        5,50 & 148,23 & -3,99 & 144,24 \\
-        5,60 & 153,66 & 12,06 & 165,72 \\
-        5,70 & 159,20 & -2,24 & 156,96 \\
-        5,80 & 164,84 & -2,38 & 162,45 \\
-        5,90 & 170,57 & -4,61 & 165,96 \\
-        6,00 & 176,40 & 1,33 & 177,73 \\
-        6,10 & 182,33 & 20,61 & 202,94 \\
-        6,20 & 188,36 & 6,94 & 195,30 \\
-        6,30 & 194,48 & -3,00 & 191,48 \\
-        6,40 & 200,70 & -3,59 & 197,11 \\
-        6,50 & 207,03 & -9,71 & 197,31 \\
-        6,60 & 213,44 & 7,43 & 220,88 \\
-        6,70 & 219,96 & 13,07 & 233,03 \\
-        6,80 & 226,58 & 3,10 & 229,68 \\
-        6,90 & 233,29 & -7,38 & 225,91 \\
-        7,00 & 240,10 & -2,01 & 238,09 \\
-        7,10 & 247,01 & 14,48 & 261,49 \\
-        7,20 & 254,02 & 15,78 & 269,80 \\
-        7,30 & 261,12 & -9,28 & 251,84 \\
-        7,40 & 268,32 & 6,52 & 274,84 \\
-        7,50 & 275,63 & 6,72 & 282,35 \\
-        7,60 & 283,02 & 0,05 & 283,07 \\
-        7,70 & 290,52 & 10,34 & 300,87 \\
-        7,80 & 298,12 & 5,41 & 303,52 \\
-        7,90 & 305,81 & -8,61 & 297,20 \\
-        8,00 & 313,60 & -6,00 & 307,60 \\
-        8,10 & 321,49 & 7,31 & 328,80 \\
-        8,20 & 329,48 & -8,22 & 321,25 \\
-        8,30 & 337,56 & -14,68 & 322,88 \\
-        8,40 & 345,74 & -12,04 & 333,71 \\
-        8,50 & 354,03 & -8,44 & 345,59 \\
-        8,60 & 362,40 & -4,61 & 357,80 \\
-        8,70 & 370,88 & 14,34 & 385,22 \\
-        8,80 & 379,46 & -10,84 & 368,62 \\
-        8,90 & 388,13 & -4,27 & 383,86 \\
-        9,00 & 396,90 & -2,75 & 394,15 \\
-        9,10 & 405,77 & 1,34 & 407,11 \\
-        9,20 & 414,74 & 0,62 & 415,35 \\
-        9,30 & 423,80 & -10,73 & 413,07 \\
-        9,40 & 432,96 & 2,04 & 435,01 \\
-        9,50 & 442,23 & -13,44 & 428,79 \\
-        9,60 & 451,58 & 3,71 & 455,29 \\
-        9,70 & 461,04 & 3,73 & 464,77 \\
-        9,80 & 470,60 & -1,38 & 469,21 \\
-        9,90 & 480,25 & 4,21 & 484,46 \\
-        10,00 & 490,00 & -0,70 & 489,30 \\
+\section{Wyniki pomiarÃ³w}
+Wyniki moÅ¼na przedstawiÄ‡ w postaci tabeli:
+\begin{longtable}{c|c|c|c}
+  \caption{Dane przedstawiajace przebieg eksperymentu}
+  \label{tab:csv_data} \\
+  \bfseries t[s] & \bfseries s[m] & \bfseries delta s & \bfseries \^s  \\
+  \hline
+  \csvreader[/csv/separator=semicolon]{dane_lab.csv}{1=\a,2=\b,3=\c,4=\d}{\a & \b & \c & \d\\}
 \end{longtable}
-\end{center}
+
+\begin{tikzpicture}
+
+\begin{axis}[
+    title=Wykres przedstawiajacy dane z tabeli,
+    xlabel= t\{s\},
+    ylabel= s\{m\},
+    legend pos=north west,
+]
 
 
+\addplot table [/pgf/number format/read comma as period, header=false,x index=0,y index=3, mark=*, col sep=semicolon] {dane_lab.csv};
+\addlegendentry{Pomiary spadku}
+
+\addplot [line width=2mm, color=green] table [/pgf/number format/read comma as period, header=false,x index=0,y index=1, mark=none, col sep=semicolon] {dane_lab.csv};
+\addlegendentry{Spadek wedlug wzoru}
+
+\end{axis}
+\end{tikzpicture}
 
 \section{Wnioski}
-Na ka¿de cia³o dzia³a grawitacja.
+Na kaÅ¼de ciaÅ‚o dziaÅ‚a grawitacja.
 
 \end{document}
+
 
